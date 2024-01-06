@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/404.css">
+</head>
+
+<body>
+
+    <h1>404</h1>
+    <div>
+        <p>> <span>ERROR CODE</span>: "<i>HTTP 404 Error Page</i>"</p>
+        <p>> <span>ERROR DESCRIPTION</span>: "<i>Access Denied. You Do Not Have The Permission To Access This Page On
+                This Server</i>"</p>
+        <p>> <span>ERROR POSSIBLY CAUSED BY</span>: [<b>Check the URL: Verify that you have entered the correct URL of
+                the page you want to access. Double-check for types, extra characters, or incorrect capitalization.
+                Simple mistakes in the URL can result in an Error 404 page.</b>...]</p>
+        <p>> <span>SOME PAGES ON THIS SERVER THAT YOU DO HAVE PERMISSION TO ACCESS </span><a href="/index.html">Home</a>
+        </p>
+        <p>> <span>HAVE A NICE DAY SIR :-)</span></p>
+    </div>
+    <script>
+        var str = document.getElementsByTagName('div')[0].innerHTML.toString();
+        var i = 0;
+        document.getElementsByTagName('div')[0].innerHTML = "";
+
+        setTimeout(function () {
+            var se = setInterval(function () {
+                i++;
+                document.getElementsByTagName('div')[0].innerHTML = str.slice(0, i) + "|";
+                if (i == str.length) {
+                    clearInterval(se);
+                    document.getElementsByTagName('div')[0].innerHTML = str;
+                }
+            }, 10);
+        }, 0);
+
+    </script>
+
+</body>
+
+</html>
